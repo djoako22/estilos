@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estilos</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+      :root {
+          --color: #000;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url("https://picsum.photos/1200/800");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #fff;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      button {
+        margin: 1rem 0;
+        padding: 16px 30px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      .btn-primary {
+        background: var(--color);
+        color: #fff;
+      }
+
+      .btn-secondary {
+        background: #fff;
+        color: #000;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        margin: 80px auto;
+      }
+
+      .content:nth-child(2n + 1) {
+        flex-direction: row-reverse;
+      }
+
+      .content div {
+        width: 50%;
+      }
+
+      .content .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+        text-align: center;
+      }
+
+      .content .image img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column-reverse !important;
+        }
+
+        .content div {
+          width: 100%;
+        }
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        background: var(--color);
+        color: #fff;
+      }
+
+      .cta .container {
+        max-width: calc(1000px - 20px);
+        margin: 0 10px;
+        padding: 80px 30px;
+      }
+
+      .freatures {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 80px 0;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        text-align: center;
+        border: 2px solid #000;
+      }
+
+      .card .image {
+        width: 100%;
+      }
+
+      .card .image img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .style-2 button {
+        border-radius: 4px;
+      }
+
+      .style-3 button {
+        border-radius: 50px;
+      }
+
+      .style-2 img,
+      .style-3 img {
+        border-radius: 10px;
+      }
+
+      .style-2 .cta,
+      .style-3 .cta {
+        background: #fff;
+      }
+
+      .style-2 .cta .container,
+      .style-3 .cta .container {
+        background: var(--color);
+        border-radius: 10px;
+      }
+
+      .style-2 .card {
+        border-radius: 10px;
+      }
+
+      .style-3 .card {
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .settings {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 200px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 16px 30px;
+      }
+
+      .settings.hide {
+        right: -180px;
+      }
+
+      .settings .toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: -16px;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        background: #000;
+        color: #fff;
+        border-radius: 50%;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="style-1">
+      <div class="header">
+        <h1>Titulo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="buttons">
+          <button class="btn-primary">Primary</button>
+          <button class="btn-secondary">Secondary</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <div class="text">
+            <h2>Titulo</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur modi debitis laborum labore nihil a consectetur nobis
+              esse veritatis sunt ad deleniti totam cum, distinctio dolorem
+              praesentium minus. Unde, quos!
+            </p>
+            <button class="btn-primary">Primary</button>
+          </div>
+          <div class="image">
+            <img src="https://picsum.photos/200/300?1" alt="" />
+          </div>
+        </div>
+        <div class="content">
+          <div class="text">
+            <h2>Titulo</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur modi debitis laborum labore nihil a consectetur nobis
+              esse veritatis sunt ad deleniti totam cum, distinctio dolorem
+              praesentium minus. Unde, quos!
+            </p>
+            <button class="btn-primary">Primary</button>
+          </div>
+          <div class="image">
+            <img src="https://picsum.photos/200/300?2" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="cta">
+        <div class="container">
+          <h2>Titulo</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            modi debitis laborum labore nihil a consectetur nobis esse veritatis
+            sunt ad deleniti totam cum, distinctio dolorem praesentium minus.
+            Unde, quos!
+          </p>
+          <button class="btn-secondary">Secondary</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="freatures">
+          <div class="card">
+            <div class="image">
+              <img src="https://picsum.photos/200/300?3" alt="" />
+            </div>
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="btn-primary">Primary</button>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="https://picsum.photos/200/300?4" alt="" />
+            </div>
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="btn-primary">Primary</button>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="https://picsum.photos/200/300?5" alt="" />
+            </div>
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="btn-primary">Primary</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="settings">
+      <div class="toggle">
+        <span>&#9776;</span>
+      </div>
+      <div class="styles">
+        <h2>Styles</h2>
+        <div class="style">
+          <label for="style-1">Style 1</label>
+          <input
+            type="radio"
+            name="style"
+            id="style-1"
+            value="style-1"
+            checked
+          />
+        </div>
+        <div class="style">
+          <label for="style-2">Style 2</label>
+          <input type="radio" name="style" id="style-2" value="style-2" />
+        </div>
+        <div class="style">
+          <label for="style-3">Style 3</label>
+          <input type="radio" name="style" id="style-3" value="style-3" />
+        </div>
+      </div>
+      <div class="color">
+        <h2>Color</h2>
+        <input type="color" name="color" id="color" />
+      </div>
+    </div>
+
+    <script>
+      const styles = document.querySelectorAll(".style");
+      const main = document.querySelector("main");
+
+      styles.forEach((style) => {
+        style.addEventListener("change", (e) => {
+          main.className = e.target.value;
+        });
+      });
+
+      const color = document.querySelector("#color");
+
+      color.addEventListener("change", (e) => {
+        document.documentElement.style.setProperty("--color", e.target.value);
+      });
+
+      const settings = document.querySelector(".settings");
+      const toggle = document.querySelector(".toggle");
+
+      toggle.addEventListener("click", () => {
+        settings.classList.toggle("hide");
+      });
+    </script>
+  </body>
+</html>
